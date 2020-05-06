@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" onKeyReleased="#callLogin" prefHeight="550.0" prefWidth="373.0"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="Client.UserInterface.OpeningWindowController">
+    <children>
+        <JFXTextField fx:id="usernameTextField" focusColor="#4caf50" labelFloat="true" layoutX="100.0" layoutY="229.0"
+                      onMouseClicked="#clearUserName" prefHeight="31.0" prefWidth="173.0" promptText="Username"
+                      text="Enter a username" unFocusColor="#4caf50"/>
+        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="112.0" layoutY="48.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../Resources/Icons/main.png"/>
+            </image>
+        </ImageView>
+        <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="132.0" layoutY="413.0" onAction="#login"
+                   prefHeight="110.0" prefWidth="110.0" style="-fx-background-radius: 100;" textFill="#00544f"/>
+        <JFXTextField fx:id="serverAddress" focusColor="#4caf50" labelFloat="true" layoutX="100.0" layoutY="290.0"
+                      onMouseClicked="#clearServer" prefHeight="31.0" prefWidth="173.0" promptText="Server"
+                      text="localhost" unFocusColor="#4caf50"/>
+        <JFXTextField fx:id="serverPort" focusColor="#4caf50" labelFloat="true" layoutX="100.0" layoutY="358.0"
+                      onMouseClicked="#clearPort" prefHeight="31.0" prefWidth="173.0" promptText="Port" text="15000"
+                      unFocusColor="#4caf50"/>
+    </children>
+</AnchorPane>

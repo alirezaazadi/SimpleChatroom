@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="789.0" prefWidth="1285.0" xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="Client.UserInterface.MainWindowController">
+    <children>
+        <SplitPane dividerPositions="0.30319563522992987" prefHeight="818.0" prefWidth="1285.0"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="211.0">
+                    <children>
+                        <VBox prefHeight="816.0" prefWidth="426.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Pane prefHeight="135.0" prefWidth="626.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="425.0"
+                                               text="Private Messages"/>
+                                        <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="14.0" layoutY="6.0"
+                                                   maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0"
+                                                   onAction="#clearAllMessage" prefHeight="45.0" prefWidth="45.0"
+                                                   style="-fx-background-radius: 100;"/>
+                                    </children>
+                                </Pane>
+                                <JFXScrollPane fx:id="privateMessageScroll" prefHeight="809.0" prefWidth="426.0">
+                                    <children>
+                                        <JFXListView fx:id="privateListView" prefHeight="736.0" prefWidth="425.0"
+                                                     style="-fx-border-color: #FFF;"/>
+                                    </children>
+                                </JFXScrollPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="881.0">
+                    <children>
+                        <SplitPane dividerPositions="0.7207207207207207" layoutX="-58.0" prefHeight="816.0"
+                                   prefWidth="849.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="486.0">
+                                    <children>
+                                        <VBox layoutX="249.0" layoutY="286.0" prefHeight="814.0" prefWidth="626.0"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Pane prefHeight="74.0" prefWidth="626.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="51.0" prefWidth="626.0"
+                                                               text="Chatroom"/>
+                                                    </children>
+                                                </Pane>
+                                                <JFXScrollPane fx:id="publicMessageScrollPane">
+                                                    <children>
+                                                        <JFXListView fx:id="publicListView" prefHeight="529.0"
+                                                                     prefWidth="626.0" style="-fx-border-color: #FFF;"/>
+                                                    </children>
+                                                </JFXScrollPane>
+                                                <Separator prefHeight="6.0" prefWidth="620.0"/>
+                                                <Pane prefHeight="118.0" prefWidth="626.0"
+                                                      style="-fx-background-color: #FFF;">
+                                                    <children>
+                                                        <JFXScrollPane fx:id="scrollPane" prefHeight="96.0"
+                                                                       prefWidth="511.0">
+                                                            <children>
+                                                                <JFXTextArea fx:id="message" prefHeight="75.0"
+                                                                             prefWidth="490.0"
+                                                                             style="-fx-background-color: #FFF;"/>
+                                                            </children>
+                                                        </JFXScrollPane>
+                                                        <JFXButton fx:id="sendButton" buttonType="RAISED"
+                                                                   layoutX="531.0" layoutY="13.0" maxHeight="75.0"
+                                                                   maxWidth="75.0" minHeight="75.0" minWidth="75.0"
+                                                                   onAction="#sendMessage" prefHeight="75.0"
+                                                                   prefWidth="75.0"
+                                                                   style="-fx-background-radius: 100;"/>
+                                                    </children>
+                                                </Pane>
+                                                <JFXProgressBar fx:id="uploadBar" disable="true" prefHeight="43.0"
+                                                                prefWidth="636.0" progress="0.0"/>
+                                                <Separator prefHeight="14.0" prefWidth="626.0"/>
+                                                <Pane prefHeight="128.0" prefWidth="626.0">
+                                                    <children>
+                                                        <JFXRadioButton fx:id="publicRadio" layoutX="522.0"
+                                                                        layoutY="14.0" prefHeight="21.0"
+                                                                        prefWidth="74.0" text="Public"/>
+                                                        <JFXRadioButton fx:id="privateRadio" layoutX="522.0"
+                                                                        layoutY="45.0" text="Private"/>
+                                                        <Label fx:id="dragFile" alignment="CENTER" layoutX="14.0"
+                                                               layoutY="11.0" onDragDropped="#onDragDropped"
+                                                               onDragOver="#dragOver" prefHeight="88.0"
+                                                               prefWidth="490.0"
+                                                               style="-fx-border-color: #558b2f; -fx-border-width: 5; -fx-border-insets: 1; -fx-border-radius: 7; -fx-border-style: dashed;"
+                                                               text="Drag and Drop file Here ..." textAlignment="CENTER"
+                                                               textFill="#000000af" wrapText="true"/>
+                                                        <JFXCheckBox fx:id="selectAllCheckBox" layoutX="522.0"
+                                                                     layoutY="78.0" onAction="#selectAll"
+                                                                     prefHeight="21.0" prefWidth="96.0"
+                                                                     text="Select All"/>
+                                                    </children>
+                                                </Pane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <VBox prefHeight="730.0" prefWidth="415.0">
+                                    <children>
+                                        <Pane prefHeight="94.0" prefWidth="244.0">
+                                            <children>
+                                                <JFXButton fx:id="getOnlineUsersButton" buttonType="RAISED"
+                                                           layoutX="185.0" layoutY="3.0" maxHeight="45.0"
+                                                           maxWidth="45.0" minHeight="45.0" minWidth="45.0"
+                                                           onAction="#getOnlineUsers" prefHeight="45.0" prefWidth="45.0"
+                                                           style="-fx-background-radius: 100;"/>
+                                                <Label layoutX="80.0" layoutY="18.0" text="Online Users"/>
+                                            </children>
+                                        </Pane>
+                                        <JFXListView fx:id="onlineUsersListView" prefHeight="719.0" prefWidth="213.0"
+                                                     style="-fx-border-color: #FFF;"/>
+                                        <Pane prefHeight="85.0" prefWidth="213.0" style="-fx-background-color: #FFF;">
+                                            <children>
+                                                <JFXButton fx:id="logoutButton" layoutX="185.0" layoutY="3.0"
+                                                           maxHeight="45.0" maxWidth="45.0" minHeight="45.0"
+                                                           minWidth="45.0" onAction="#logOut" prefHeight="45.0"
+                                                           prefWidth="45.0" style="-fx-background-radius: 100;"/>
+                                                <Label fx:id="userNameLabel" layoutX="48.0" layoutY="8.0"
+                                                       prefHeight="35.0" prefWidth="133.0"/>
+                                                <ImageView fx:id="userImage" fitHeight="35.0" fitWidth="35.0"
+                                                           layoutX="6.0" layoutY="8.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../Resources/Icons/user.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </VBox>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
