@@ -19,13 +19,32 @@ You can :
 
 * Want more? come ooooon! This is a fucking simple project for university course dude :))
 
-By default, (For message passing) the server listens on port `15000`.
+## Runnig
+
+`ClientRunner.java` in Client package is Client Main function.
+
+`ServerRunner.java` in Server package is Server Main function.
+
+By default, (For message passing) the server listens on port `15000` with `100` client capacity
 
 Server's file downloader socket listens on `15001`
 
 Client's file downloader socket listens on `15002`
 
-To communicate between client and server to each other i used some message with
+You can also change the server default port and its capacity using command-line arguments :
+
+```bat
+java ServerRunner [PORT_NUMBER] [CAPACITY]
+```
+
+Server file downloader and client file downloader sockets ports will change
+based on this new value:
+
+`SERVER FILE DOWNLOADER PORT = PORT_NUMBER + 1`
+
+`CLIENT FILE DOWNLOADER PORT = PORT_NUMBER + 2`
+
+To communicate between client and server to each other I used some message with
 specific format (protocol), you can see this list below (And some additional response codes):
 
 ## MESSAGES
