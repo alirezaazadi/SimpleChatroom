@@ -21,9 +21,9 @@ You can :
 
 ## Runnig
 
-`ClientRunner.java` in Client package is Client Main function.
+`ClientRunner.java` in Client package is the Client Main function.
 
-`ServerRunner.java` in Server package is Server Main function.
+`ServerRunner.java` in Server package is the Server Main function.
 
 By default, (For message passing) the server listens on port `15000` with `100` client capacity
 
