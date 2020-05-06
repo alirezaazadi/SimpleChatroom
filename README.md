@@ -7,6 +7,8 @@ JavaFX Material Design Library : [JFoenix](https://github.com/jfoenixadmin/JFoen
 
 Logging Library : [log4j](https://github.com/apache/log4j)
 
+**Minumum required java is: `java 8`**
+
 You can :
 
 * Send a text message (Public or Private)
@@ -148,12 +150,20 @@ specific format (protocol), you can see this list below (And some additional res
 
 ### Failed to login
 
-![](failed.gif)
+![login](failed.gif)
 
 ## TODO
 
 * `Fix Multiuser private file sending bug`
-* Adding more accurate usrname validation in both server and client side
-* Adding download and upload progressbar
+
+* Adding more accurate username validation in both server and client-side
+
+* Adding progress bar for downloading and uploading process
+
 * Changing file size format message to a readable one (KB, MB or GB)
+
+* Using Gradle for building the project (Handling dependencies)
+
+* Making jar file for both client and server application
+
 * Adding more demo :)
