@@ -1,7 +1,8 @@
 # SimpleChatroom
 
-This is my network course project, i used from Java and JavaFX to impliment it and used some
-extra libraries :
+This is my network course project and my first serious effort in building a graphical application :)
+
+I used from Java and JavaFX to impliment it and used some extra libraries :
 
 JavaFX Material Design Library : [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 
