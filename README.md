@@ -17,7 +17,7 @@ You can :
 
 * See online users (Realtime)
 
-* Want more? come ooooon! This is a fucking simple project for university course dude :))
+* Want more? come ooooon! This is a fucking simple project for university course dude :)) but I will be happy if you contribute and improve it or even better do some tasks of the below [Todo List](##TODO) :D
 
 ## Runnig
 
