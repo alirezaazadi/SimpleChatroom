@@ -1,14 +1,14 @@
 # SimpleChatroom
 
-This is my network course project and my first serious effort in building a graphical application :)
+Network course Client-Server based chat application project.
 
-I used from Java and JavaFX to impliment it and used some extra libraries :
+I used from Java and JavaFX to implement it and used some extra libraries :
 
 JavaFX Material Design Library : [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 
 Logging Library : [log4j](https://github.com/apache/log4j)
 
-**Minumum required java is: `java 8`**
+**Minimum required java is: `java 8`**
 
 You can :
 
@@ -18,9 +18,7 @@ You can :
 
 * See online users (Realtime)
 
-* Want more? come ooooon! This is a fucking simple project for university course dude :)) but I will be happy if you contribute and improve it or even better do some tasks of the below [Todo List](#TODO) :D
-
-## Runnig
+## Running
 
 `ClientRunner.java` in Client package is the Client Main function.
 
@@ -45,7 +43,7 @@ based on this new value:
 
 `CLIENT FILE DOWNLOADER PORT = PORT_NUMBER + 2`
 
-To communicate between client and server to each other I used some message with
+To communicate between a client and server to each other I used some message with
 specific format (protocol), you can see this list below (And some additional response codes):
 
 ## MESSAGES
@@ -168,7 +166,7 @@ specific format (protocol), you can see this list below (And some additional res
 
 ![mainWindow](main.png)
 
-### Failed to login
+### Failed to log in
 
 ![login](failed.gif)
 
@@ -186,4 +184,3 @@ specific format (protocol), you can see this list below (And some additional res
 
 * Making jar file for both client and server application
 
-* Adding more demo :)
